@@ -1,59 +1,66 @@
-    package Ej05;
 
-    public class MarcaPaso {
+package ClasesSecundarias;
+
+import ClasesSecundarias.Desfibrilador;
+
+public class MarcaPaso extends DispositivoMedico{
 
         // atributos
-        private static int contador;
-        private final int idDispositivo; // este atributo no pude cambiar
-        private String codigoFabricante;
+
         private short latidosPorMinutos;
-        private byte nivelBateria;
+        
 
         // constructor
-        public MarcaPaso(int idDispositivo, String codigoFabricante, short latidosPorMinutos, byte nivelBateria){
-            this.idDispositivo = idDispositivo;
-            this.codigoFabricante = codigoFabricante;
+        public MarcaPaso(int idDispositivo, String codigoFabricante,short latidosPorMinutos,  byte nivelBateria){
+            super(idDispositivo, codigoFabricante, nivelBateria);
             this.latidosPorMinutos = latidosPorMinutos;
-            this.nivelBateria = nivelBateria;
-            
-            contador++;
         }
 
-        // Solamente get de id 
+        /* 
+        Solamente get de id 
         public int getIdDispositivo(){
             return this.idDispositivo;
         }
+        */ 
 
-        // getter de codigo de fabriacante
+        /* 
+        getter de codigo de fabriacante
         public String getCodigoFabricante(){
             return this.codigoFabricante;
+        }        
+        */ 
+
+        /*getter de nivel de bateria
+        public short getNivelBateria(){
+            return this.nivelBateria;
+        } */ 
+        
+
+        
+        /* 
+        setter de nivel de bateria
+        public void setNivelBateria(byte nivelBateria){
+            this.nivelBateria = nivelBateria;
         }
+        
+        */ 
+
+        /* 
+        Incorporar un contador static de instancias creadas y un identificador constante final del dispositivo.
+        public static int getContador(){
+            return contador;
+        }
+        */ 
 
         // getter de latidos por minutos;
         public short getLatidosPorMinutos(){
             return this.latidosPorMinutos;
         }
-
-        // getter de nivel de bateria
-        public short getNivelBateria(){
-            return this.nivelBateria;
-        }
-
         // setter de latidos por minutos
         public void setLatidosPorMinutos(short latidosPorMinutos){
             this.latidosPorMinutos = latidosPorMinutos;
         }
-
-        // setter de nivel de bateria
-        public void setNivelBateria(byte nivelBateria){
-            this.nivelBateria = nivelBateria;
-        }
-
-        // Incorporar un contador static de instancias creadas y un identificador constante final del dispositivo.
-        public static int getContador(){
-            return contador;
-        }
-
+        
         // toString para que sea legible
         @Override
         public String toString(){
@@ -64,7 +71,7 @@
             "Nivel de bateria: " + nivelBateria;
         }
 
-        // equals 
+        /* equals 
         @Override
         public boolean equals(Object obj){
             if(this == obj){ // si es objeto, devolve true
@@ -80,23 +87,30 @@
             
             return this.idDispositivo == otro.idDispositivo; // compara id 
             }
+        */  
+
+        /*
         
         @Override
         public int hashCode(){
-                return idDispositivo;
+            return idDispositivo;
         }
-
+        
+        */
+    
         // main
         public static void main(String[] args){
             MarcaPaso m1 = new MarcaPaso(10,"1234",(short)100, (byte) 60);
             MarcaPaso m2 = new MarcaPaso(11,"1234",(short)100, (byte)60);
             MarcaPaso m3 = new MarcaPaso(12,"1234",(short)100, (byte) 60);
-            System.out.println("Cantidad de dispositivos: " + MarcaPaso.getContador());
+            Desfibrilador d1 = new Desfibrilador(13, "5678", (byte)80, 200, 3);
+            System.out.println("Cantidad de dispositivos: " + DispositivoMedico.getContador());
             System.out.println();
             System.out.println(m1);
             System.out.println(m2);
             System.out.println(m3);
+            System.out.println(d1);
 
-        System.out.println(MarcaPaso.getContador());
+
         }
     }
