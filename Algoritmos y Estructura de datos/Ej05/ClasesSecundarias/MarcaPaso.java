@@ -1,7 +1,7 @@
 
 package ClasesSecundarias;
 
-import ClasesSecundarias.Desfibrilador;
+
 
 public class MarcaPaso extends DispositivoMedico{
 
