@@ -29,19 +29,24 @@ public class Palindromo {
 
 
         
+
+
+        
         String nuevoArray = new String(charArray);
         System.out.println(nuevoArray);
         System.out.println(hannah.toLowerCase()); // cambia a minuscula
         System.out.println(frase.toUpperCase()); // cambia a mayuscula
         System.out.println(palindrome.substring(1,3)); // imprime las posiciones
         System.out.println(frase.trim());
-        System.out.println(frase.indexOf(0));
+        System.out.println(frase.indexOf(0)); // fixear esto
         System.out.println(frase.lastIndexOf(3));
         System.out.println(frase.contains("a"));
         System.out.println(frase.replace("a", "e"));
         System.out.println(frase.replaceAll("anita lava la tina", "Aguante el bolso"));
         System.out.println(frase.replaceFirst("anita lava la tina", "Aguante cidudad gotica"));
-        
+        System.out.println("La longitud de la frase es: "+ frase.length());
+        System.out.println("La sub sequence de la frase es: "+ frase.subSequence(1,2));
+
 
 
 
