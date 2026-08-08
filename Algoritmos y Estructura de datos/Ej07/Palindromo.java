@@ -27,10 +27,6 @@ public class Palindromo {
             System.out.println(partes[i]);
         }
 
-
-        
-
-
         
         String nuevoArray = new String(charArray);
         System.out.println(nuevoArray);
