@@ -2,14 +2,18 @@ package Ej09;
 
 class ContadorPalabras implements ProcesadorTexto {
 
-    private int contador;
+    
+
+
     
  @Override
 
  public int contarPalabras(String texto) {
-     
+     String[ ] palabras = texto.split(" ");
     
- return 0; // TODO
+    public int 
+     
+ return palabras.length; // TODO
 
  }
 }
