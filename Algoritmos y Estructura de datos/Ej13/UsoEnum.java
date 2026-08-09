@@ -1,4 +1,4 @@
-package AlgoritmosEstructurasDeDatos.Ej13;
+package Ej13;
 
 enum TipoCaracter {
  VOCAL,
@@ -15,7 +15,7 @@ enum TipoCaracter {
         this.tipoCaracter = tipoCaracter;
     }
     
-    public void mostrarTipos(){
+    public static void mostrarTipos(){
         for(TipoCaracter tc : TipoCaracter.values()){
             System.out.println(tc);
         }
@@ -34,6 +34,30 @@ enum TipoCaracter {
         else{
             return TipoCaracter.OTRO;
         }
+    }
+
+    public static void contarCaracteres(String texto){
+        int vocales = 0;
+        int consonantes = 0;
+        for(char caracter : texto.toCharArray()){
+            TipoCaracter tipo = clasificarCaracter(caracter);
+            if(tipo == TipoCaracter.VOCAL){
+                vocales++;
+            }
+            if(tipo == TipoCaracter.CONSONANTE){
+                consonantes++;
+            }
+        }
+        System.out.println(vocales);
+        System.out.println(consonantes);
+        
+
+        
+         
+    }
+    public static void main(String[] args){
+        mostrarTipos(); // lo muestro asi porque mostrar tipos es un metodo estatico
+        contarCaracteres("Estoy aprendiendo Java");
     }
     
 }

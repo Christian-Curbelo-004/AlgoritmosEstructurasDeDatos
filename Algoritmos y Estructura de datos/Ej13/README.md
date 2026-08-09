@@ -1,0 +1,3 @@
+Explicacion de porque el uso de enum:
+
+El uso de enum permite enumerar un conjunto fijo de valores y representarlos de una forma clara y práctica. En este caso, permite clasificar los caracteres como VOCAL, CONSONANTE, DIGITO u OTRO, haciendo que el código sea más fácil de leer y escribir. Además, si en el futuro se necesita agregar otro tipo de carácter, se puede incorporar al enum de forma sencilla, mejorando la mantenibilidad del programa.
